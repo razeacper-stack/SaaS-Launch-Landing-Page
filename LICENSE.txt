@@ -1,0 +1,36 @@
+SaaS Launch Template License
+
+Copyright (c) 2026 SaaS Launch Authors & Contributors.
+
+==============================================================================
+LICENSE NOTICE & TERMS PLACEHOLDER
+==============================================================================
+
+This template is provided as a commercial-ready, customizable front-end web
+asset. Before distributing or submitting this template to a digital marketplace
+(e.g., ThemeForest, Creative Market, Envato Elements, UI8) or using it for a 
+client project, replace the placeholder below with your appropriate license:
+
+------------------------------------------------------------------------------
+[COMMERCIAL / MARKETPLACE LICENSE TERMS PLACEHOLDER]
+
+Permission is hereby granted to purchasers of this template to:
+1. Use the template for personal, educational, and commercial projects.
+2. Modify, adapt, brand, and extend the source code.
+3. Incorporate the template into a SaaS product or client deliverables.
+
+Restrictions:
+1. You may not sub-license, resell, or redistribute the template source files
+   as a standalone template or theme without explicit authorization.
+2. The original author attribution and documentation copyright notices must
+   be respected in accordance with your chosen distribution tier.
+
+DISCLAIMER:
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+==============================================================================

@@ -1,0 +1,6 @@
+{
+  "name": "SaaS Launch",
+  "description": "A premium, modern, responsive SaaS landing page template with bilingual English and Arabic RTL support, dynamic dark and light mode theming, built with HTML5, CSS3, and vanilla JavaScript.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

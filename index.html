@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO & Social Meta Tags -->
+  <title>SaaS Launch — Premium SaaS Landing Page Template</title>
+  <meta name="description" content="Launch your next big idea faster with SaaS Launch. A modern, responsive, high-converting SaaS landing page template." />
+  <meta name="keywords" content="SaaS, landing page, startup template, UI UX, dashboard, web app, front-end template" />
+  <meta name="author" content="SaaS Launch" />
+  
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SaaS Launch — Premium SaaS Landing Page Template" />
+  <meta property="og:description" content="Everything your team needs to plan, build, and scale smarter — all in one powerful platform." />
+  <meta property="og:image" content="/assets/images/og-preview.png" />
+  <meta property="og:url" content="https://saaslaunch.demo" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SaaS Launch — Premium SaaS Landing Page Template" />
+  <meta name="twitter:description" content="Everything your team needs to plan, build, and scale smarter — all in one powerful platform." />
+
+  <!-- Google Fonts Preconnect & Plus Jakarta Sans / Cairo / JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Simple Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23635BFF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='13 2 3 14 12 14 11 22 21 10 12 10 13 2'/></svg>" />
+</head>
+<body>
+
+  <!-- =========================================================================
+       A. Announcement Bar
+       ========================================================================= -->
+  <aside id="announcement-bar" class="announcement-bar" role="complementary" aria-label="Announcement">
+    <div class="announcement-content">
+      <span class="announcement-badge" data-i18n="announcementBadge">NEW</span>
+      <span class="announcement-text" data-i18n="announcementText">SaaS Launch 2.0 is live with advanced real-time collaboration tools.</span>
+      <a href="#features" class="announcement-link">
+        <span data-i18n="announcementLink">Explore what's new</span>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </a>
+    </div>
+    <button type="button" id="announcement-dismiss" class="announcement-dismiss" aria-label="Dismiss announcement">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+  </aside>
+
+  <!-- =========================================================================
+       B. Responsive Navigation
+       ========================================================================= -->
+  <header id="site-header" class="site-header" role="banner">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#" class="brand-logo" aria-label="SaaS Launch Home">
+        <div class="logo-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <span>SaaS Launch</span>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="#product" class="nav-link" data-i18n="navProduct">Product</a>
+        <a href="#features" class="nav-link" data-i18n="navFeatures">Features</a>
+        <a href="#pricing" class="nav-link" data-i18n="navPricing">Pricing</a>
+        <a href="#testimonials" class="nav-link" data-i18n="navTestimonials">Testimonials</a>
+        <a href="#faq" class="nav-link" data-i18n="navFaq">FAQ</a>
+      </nav>
+
+      <!-- Nav CTA Actions -->
+      <div class="nav-actions">
+        <!-- Language Switcher Button -->
+        <button type="button" id="lang-toggle-btn" class="lang-toggle-btn" aria-label="Switch language to Arabic" title="Switch language" data-i18n-aria="langToggleAria">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span class="lang-text" id="lang-current-label">عربي</span>
+        </button>
+
+        <!-- Theme Toggle Button -->
+        <button type="button" id="theme-toggle-btn" class="theme-toggle-btn" aria-label="Toggle dark or light theme" title="Toggle dark / light theme" data-i18n-aria="themeToggleAria">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+
+        <button type="button" class="btn btn-ghost" data-open-signup data-plan="starter" id="btn-nav-signin" data-i18n="navSignIn">Sign In</button>
+        <button type="button" class="btn btn-primary" data-open-signup data-plan="pro" id="btn-nav-getstarted">
+          <span data-i18n="navGetStarted">Get Started Free</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+        
+        <!-- Mobile Navigation Toggle -->
+        <button type="button" id="mobile-nav-toggle" class="mobile-nav-toggle" aria-expanded="false" aria-controls="mobile-drawer" aria-label="Toggle navigation menu">
+          <span class="hamburger-box">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Overlay -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-label="Mobile menu" role="dialog" aria-modal="true">
+      <div class="mobile-drawer-toolbar">
+        <button type="button" id="lang-toggle-btn-mobile" class="lang-toggle-btn" aria-label="Switch language">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+          <span class="lang-text" id="lang-current-label-mobile">عربي</span>
+        </button>
+
+        <button type="button" id="theme-toggle-btn-mobile" class="theme-toggle-btn" aria-label="Toggle dark or light theme">
+          <svg class="theme-icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="theme-icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-drawer-links">
+        <a href="#product" class="mobile-drawer-link" data-i18n="navProduct">Product</a>
+        <a href="#features" class="mobile-drawer-link" data-i18n="navFeatures">Features</a>
+        <a href="#pricing" class="mobile-drawer-link" data-i18n="navPricing">Pricing</a>
+        <a href="#testimonials" class="mobile-drawer-link" data-i18n="navTestimonials">Testimonials</a>
+        <a href="#faq" class="mobile-drawer-link" data-i18n="navFaq">FAQ</a>
+        <a href="#contact" class="mobile-drawer-link" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="mobile-drawer-actions">
+        <button type="button" class="btn btn-secondary w-full" data-open-signup data-plan="starter" data-i18n="navSignIn">Sign In</button>
+        <button type="button" class="btn btn-primary w-full" data-open-signup data-plan="pro" data-i18n="navGetStarted">Get Started Free</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- =======================================================================
+         C. Hero Section
+         ======================================================================= -->
+    <section class="hero-section" id="hero" aria-labelledby="hero-headline">
+      <div class="hero-bg-grid" aria-hidden="true"></div>
+      <div class="hero-glow-1" aria-hidden="true"></div>
+      <div class="hero-glow-2" aria-hidden="true"></div>
+
+      <div class="container hero-container">
+        <!-- Hero Header -->
+        <div class="hero-header reveal">
+          <div class="section-eyebrow">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+            <span data-i18n="heroEyebrow">THE SMARTER WAY TO WORK</span>
+          </div>
+          <h1 id="hero-headline" class="hero-headline">
+            <span data-i18n="heroHeadlinePart1">Launch Your Next Big Idea, </span><span style="background: linear-gradient(135deg, #635bff 0%, #8b5cf6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" data-i18n="heroHeadlinePart2">Faster.</span>
+          </h1>
+          <p class="hero-subtext" data-i18n="heroSubtext">
+            Everything your team needs to plan, build, and scale smarter — all in one powerful, unified platform.
+          </p>
+
+          <!-- Dual CTAs -->
+          <div class="hero-cta-group">
+            <button type="button" class="btn btn-primary btn-lg" data-open-signup data-plan="pro" id="hero-cta-primary">
+              <span data-i18n="heroStartTrial">Start Free Trial</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <a href="#features" class="btn btn-secondary btn-lg" id="hero-cta-secondary" data-i18n="heroExploreFeatures">
+              Explore Features
+            </a>
+          </div>
+
+          <!-- Trust Statement -->
+          <div class="hero-trust-statement">
+            <svg class="trust-check-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span data-i18n="heroTrust">No credit card required &middot; Get started in minutes</span>
+          </div>
+        </div>
+
+        <!-- Hero Product Dashboard Preview Mockup -->
+        <div class="hero-mockup-wrapper reveal">
+          <!-- Floating micro-card: User satisfaction -->
+          <div class="floating-chip floating-chip-1" aria-hidden="true">
+            <div class="floating-avatar-group">
+              <div class="floating-avatar" style="background:#635bff; color:#fff;">JD</div>
+              <div class="floating-avatar" style="background:#0ea5e9; color:#fff;">SR</div>
+              <div class="floating-avatar" style="background:#10b981; color:#fff;">AK</div>
+            </div>
+            <div class="floating-chip-info">
+              <span class="floating-chip-title" data-i18n="chip1Title">Team Synchronized</span>
+              <span class="floating-chip-desc" data-i18n="chip1Desc">+42% speed boost</span>
+            </div>
+          </div>
+
+          <!-- Floating micro-card: Weekly growth -->
+          <div class="floating-chip floating-chip-2" aria-hidden="true">
+            <div class="floating-chip-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+            </div>
+            <div class="floating-chip-info">
+              <span class="floating-chip-title" data-i18n="chip2Title">Sprint Velocity</span>
+              <span class="floating-chip-desc" data-i18n="chip2Desc">97% Target Achieved</span>
+            </div>
+          </div>
+
+          <!-- The Dashboard Window Mockup -->
+          <div class="dashboard-window" id="hero-dashboard-preview">
+            <!-- Window Topbar -->
+            <div class="window-topbar">
+              <div class="window-dots" aria-hidden="true">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="window-search" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <span id="dash-search-text" data-i18n="dashSearch">Search projects, metrics, workflows...</span>
+              </div>
+              <div class="window-user-profile" aria-hidden="true">
+                <span style="font-size:0.75rem; font-weight:600; color:var(--color-text-body);" data-i18n="userAlex">Alex Morgan</span>
+                <div class="user-avatar-tiny">AM</div>
+              </div>
+            </div>
+
+            <!-- Dashboard Body -->
+            <div class="dashboard-body">
+              <!-- Interactive Sidebar Icons Navigation -->
+              <aside class="dash-sidebar" role="tablist" aria-label="Dashboard Views">
+                <button type="button" class="sidebar-icon-btn is-active" role="tab" id="dash-tab-overview" data-dash-tab="overview" aria-selected="true" aria-controls="dash-view-overview" title="Dashboard Overview" aria-label="Dashboard Overview">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+                </button>
+                <button type="button" class="sidebar-icon-btn" role="tab" id="dash-tab-analytics" data-dash-tab="analytics" aria-selected="false" aria-controls="dash-view-analytics" title="Analytics & Activities" aria-label="Analytics & Activities">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </button>
+                <button type="button" class="sidebar-icon-btn" role="tab" id="dash-tab-workflows" data-dash-tab="workflows" aria-selected="false" aria-controls="dash-view-workflows" title="Workflows & Automations" aria-label="Workflows & Automations">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                </button>
+                <button type="button" class="sidebar-icon-btn" role="tab" id="dash-tab-team" data-dash-tab="team" aria-selected="false" aria-controls="dash-view-team" title="Team Members" aria-label="Team Members">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                </button>
+                <button type="button" class="sidebar-icon-btn" role="tab" id="dash-tab-settings" data-dash-tab="settings" aria-selected="false" aria-controls="dash-view-settings" title="Settings" aria-label="Workspace Settings" style="margin-top:auto;">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+                </button>
+              </aside>
+
+              <!-- Main Dashboard Canvas -->
+              <div class="dash-main">
+
+                <!-- 1. VIEW: Overview -->
+                <div class="dash-view dash-view-overview is-active" id="dash-view-overview" role="tabpanel" aria-labelledby="dash-tab-overview">
+                  <!-- KPI Cards Row -->
+                  <div class="dash-kpis">
+                    <div class="kpi-card">
+                      <div class="kpi-top">
+                        <span class="kpi-label" data-i18n="kpiUsers">Active Users</span>
+                        <span class="kpi-badge badge-green">+25.4%</span>
+                      </div>
+                      <span class="kpi-value">72,640</span>
+                      <span class="kpi-footnote" data-i18n="kpiUsersFoot">vs. 57,920 last month</span>
+                    </div>
+
+                    <div class="kpi-card">
+                      <div class="kpi-top">
+                        <span class="kpi-label" data-i18n="kpiRevenue">Monthly Run-Rate</span>
+                        <span class="kpi-badge badge-purple">+18.2%</span>
+                      </div>
+                      <span class="kpi-value">$87,250</span>
+                      <span class="kpi-footnote" data-i18n="kpiRevenueFoot">Avg. revenue per seat $19</span>
+                    </div>
+
+                    <div class="kpi-card">
+                      <div class="kpi-top">
+                        <span class="kpi-label" data-i18n="kpiUptime">Infrastructure Uptime</span>
+                        <span class="kpi-badge badge-green">99.99%</span>
+                      </div>
+                      <span class="kpi-value" data-i18n="kpiIncidents">0 Incidents</span>
+                      <span class="kpi-footnote" data-i18n="kpiUptimeFoot">Global edge clusters healthy</span>
+                    </div>
+                  </div>
+
+                  <!-- Charts Split -->
+                  <div class="dash-charts-split">
+                    <!-- Performance Area Wave Chart -->
+                    <div class="chart-panel">
+                      <div class="chart-panel-header">
+                        <span class="chart-panel-title" data-i18n="chartTitle">System Throughput & Performance</span>
+                        <span class="chart-period-pill" data-i18n="chartPeriod">Last 30 Days</span>
+                      </div>
+                      <div class="svg-chart-container" aria-hidden="true">
+                        <svg viewBox="0 0 450 120" preserveAspectRatio="none" style="width:100%; height:100%; overflow:visible;">
+                          <defs>
+                            <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                              <stop offset="0%" stop-color="#635bff" stop-opacity="0.32" />
+                              <stop offset="100%" stop-color="#635bff" stop-opacity="0.0" />
+                            </linearGradient>
+                          </defs>
+                          <line x1="0" y1="30" x2="450" y2="30" stroke="#f1f5f9" stroke-dasharray="4 4" />
+                          <line x1="0" y1="70" x2="450" y2="70" stroke="#f1f5f9" stroke-dasharray="4 4" />
+                          <line x1="0" y1="110" x2="450" y2="110" stroke="#f1f5f9" stroke-dasharray="4 4" />
+                          <path d="M0,85 C60,95 90,40 140,50 C190,60 220,15 270,30 C320,45 360,75 400,35 C425,12 440,25 450,20 L450,120 L0,120 Z" fill="url(#chartGradient)" />
+                          <path d="M0,85 C60,95 90,40 140,50 C190,60 220,15 270,30 C320,45 360,75 400,35 C425,12 440,25 450,20" fill="none" stroke="#635bff" stroke-width="3" stroke-linecap="round" />
+                          <circle cx="270" cy="30" r="4" fill="#ffffff" stroke="#635bff" stroke-width="2.5" />
+                          <circle cx="400" cy="35" r="4" fill="#ffffff" stroke="#635bff" stroke-width="2.5" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    <!-- Radial Velocity Donut Gauge -->
+                    <div class="chart-panel">
+                      <div class="chart-panel-header">
+                        <span class="chart-panel-title" data-i18n="donutTitle">Team Velocity</span>
+                        <span class="chart-period-pill" data-i18n="donutPeriod">Sprint 42</span>
+                      </div>
+                      <div class="gauge-container" aria-hidden="true">
+                        <svg width="110" height="110" viewBox="0 0 120 120">
+                          <circle cx="60" cy="60" r="48" fill="none" stroke="#f1f5f9" stroke-width="10" />
+                          <circle cx="60" cy="60" r="48" fill="none" stroke="#10b981" stroke-width="10" stroke-dasharray="301.59" stroke-dashoffset="24.1" stroke-linecap="round" transform="rotate(-90 60 60)" />
+                        </svg>
+                        <div class="gauge-center-text">
+                          <div class="gauge-percentage">97%</div>
+                          <div class="gauge-label" data-i18n="donutLabel">Tasks Shipped</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Recent Activity Mini-List -->
+                  <div class="dash-activity-panel">
+                    <div class="activity-header">
+                      <span class="activity-title" data-i18n="activityTitle">Live Pipeline Activity</span>
+                      <button type="button" class="btn-dash-action" id="dash-quick-switch-act" style="border:none; padding:0; color:var(--color-primary); background:transparent; font-size:0.72rem; font-weight:700;" data-i18n="activityViewAll">View all &rarr;</button>
+                    </div>
+                    <div class="activity-rows" id="dash-quick-activity-list">
+                      <div class="activity-row">
+                        <div class="activity-left">
+                          <span class="activity-icon">&check;</span>
+                          <span class="activity-name" data-i18n="activityTask1">Payment Gateway V2 Migration</span>
+                        </div>
+                        <span class="activity-tag tag-success" data-i18n="activityTagCompleted">Completed</span>
+                      </div>
+                      <div class="activity-row">
+                        <div class="activity-left">
+                          <span class="activity-icon" style="background:#ede9fe; color:#6d28d9;">&bull;</span>
+                          <span class="activity-name" data-i18n="activityTask2">Automated SOC2 Compliance Export</span>
+                        </div>
+                        <span class="activity-tag tag-active" data-i18n="activityTagInProgress">In Progress</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 2. VIEW: Analytics & Activities -->
+                <div class="dash-view dash-view-analytics" id="dash-view-analytics" role="tabpanel" aria-labelledby="dash-tab-analytics">
+                  <div class="dash-view-header">
+                    <div class="dash-view-title-group">
+                      <span class="dash-view-title">
+                        <span data-i18n="actTitle">Analytics & Live Activities</span>
+                      </span>
+                      <span class="dash-view-subtitle" data-i18n="actSubtitle">Real-time metrics, telemetry, and operational activity streams</span>
+                    </div>
+                    <div class="dash-view-actions">
+                      <div class="dash-filter-group" role="group" aria-label="Activity Categories">
+                        <button type="button" class="dash-filter-pill is-active" data-act-filter="all" data-i18n="actFilterAll">All Activities</button>
+                        <button type="button" class="dash-filter-pill" data-act-filter="deploys" data-i18n="actFilterDeploys">Deployments</button>
+                        <button type="button" class="dash-filter-pill" data-act-filter="alerts" data-i18n="actFilterAlerts">Security & Alerts</button>
+                        <button type="button" class="dash-filter-pill" data-act-filter="sync" data-i18n="actFilterSync">Team Sync</button>
+                      </div>
+                      <button type="button" class="btn-dash-action btn-dash-primary" id="btn-simulate-activity">
+                        <span data-i18n="actAddEvent">+ Simulate Event</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- 3 Detailed Metric Cards -->
+                  <div class="dash-kpis">
+                    <div class="kpi-card">
+                      <div class="kpi-top">
+                        <span class="kpi-label" data-i18n="kpiLatency">API Response Latency</span>
+                        <span class="kpi-badge badge-green">-14ms Faster</span>
+                      </div>
+                      <span class="kpi-value">38ms</span>
+                      <span class="kpi-footnote" data-i18n="kpiLatencyFoot">99th percentile across edge clusters</span>
+                    </div>
+
+                    <div class="kpi-card">
+                      <div class="kpi-top">
+                        <span class="kpi-label" data-i18n="kpiConversion">Conversion Rate</span>
+                        <span class="kpi-badge badge-purple">+1.4%</span>
+                      </div>
+                      <span class="kpi-value">4.82%</span>
+                      <span class="kpi-footnote" data-i18n="kpiConversionFoot">Checkout funnel drop-off -22%</span>
+                    </div>
+
+                    <div class="kpi-card">
+                      <div class="kpi-top">
+                        <span class="kpi-label" data-i18n="kpiErrorRate">Error Budget</span>
+                        <span class="kpi-badge badge-green">99.992%</span>
+                      </div>
+                      <span class="kpi-value">0.008%</span>
+                      <span class="kpi-footnote" data-i18n="kpiErrorRateFoot">Zero unhandled exceptions today</span>
+                    </div>
+                  </div>
+
+                  <!-- Dynamic Filterable Activity Feed -->
+                  <div class="activity-rows" id="dash-full-activity-stream">
+                    <div class="activity-row dash-act-item" data-category="deploys">
+                      <div class="activity-left">
+                        <span class="activity-icon" style="background:#dcfce7; color:#15803d;">&check;</span>
+                        <div>
+                          <div class="activity-name">Production Edge Rollout v2.4.1</div>
+                          <div style="font-size:0.65rem; color:var(--color-text-muted);">Deployed by Sarah Chen &middot; 24 edge nodes updated</div>
+                        </div>
+                      </div>
+                      <div style="display:flex; align-items:center; gap:var(--space-2);">
+                        <span class="activity-tag tag-success">Live</span>
+                        <span style="font-size:0.65rem; color:var(--color-text-muted);">2m ago</span>
+                      </div>
+                    </div>
+
+                    <div class="activity-row dash-act-item" data-category="alerts">
+                      <div class="activity-left">
+                        <span class="activity-icon" style="background:#ede9fe; color:#6d28d9;">&bull;</span>
+                        <div>
+                          <div class="activity-name">Automated TLS Certificate Renewal</div>
+                          <div style="font-size:0.65rem; color:var(--color-text-muted);">Let's Encrypt wildcard cert verified & applied</div>
+                        </div>
+                      </div>
+                      <div style="display:flex; align-items:center; gap:var(--space-2);">
+                        <span class="activity-tag tag-active">Verified</span>
+                        <span style="font-size:0.65rem; color:var(--color-text-muted);">14m ago</span>
+                      </div>
+                    </div>
+
+                    <div class="activity-row dash-act-item" data-category="sync">
+                      <div class="activity-left">
+                        <span class="activity-icon" style="background:#e0f2fe; color:#0369a1;">&rarr;</span>
+                        <div>
+                          <div class="activity-name">Sprint 42 Retrospective Notes shared</div>
+                          <div style="font-size:0.65rem; color:var(--color-text-muted);">Alex Morgan synced 12 engineering action items</div>
+                        </div>
+                      </div>
+                      <div style="display:flex; align-items:center; gap:var(--space-2);">
+                        <span class="activity-tag tag-success">Shared</span>
+                        <span style="font-size:0.65rem; color:var(--color-text-muted);">35m ago</span>
+                      </div>
+                    </div>
+
+                    <div class="activity-row dash-act-item" data-category="deploys">
+                      <div class="activity-left">
+                        <span class="activity-icon" style="background:#dcfce7; color:#15803d;">&check;</span>
+                        <div>
+                          <div class="activity-name">Docker Container Image scanned (0 CVEs)</div>
+                          <div style="font-size:0.65rem; color:var(--color-text-muted);">CI pipeline passed vulnerability benchmark</div>
+                        </div>
+                      </div>
+                      <div style="display:flex; align-items:center; gap:var(--space-2);">
+                        <span class="activity-tag tag-success">Clean</span>
+                        <span style="font-size:0.65rem; color:var(--color-text-muted);">1h ago</span>
+                      </div>
+                    </div>
+
+                    <div class="activity-row dash-act-item" data-category="alerts">
+                      <div class="activity-left">
+                        <span class="activity-icon" style="background:#fef3c7; color:#b45309;">!</span>
+                        <div>
+                          <div class="activity-name">Rate limiting triggered for IP 198.51.100.2</div>
+                          <div style="font-size:0.65rem; color:var(--color-text-muted);">Edge firewall challenged 350 abusive requests</div>
+                        </div>
+                      </div>
+                      <div style="display:flex; align-items:center; gap:var(--space-2);">
+                        <span class="activity-tag tag-pending">Mitigated</span>
+                        <span style="font-size:0.65rem; color:var(--color-text-muted);">2h ago</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 3. VIEW: Workflows & Automations -->
+                <div class="dash-view dash-view-workflows" id="dash-view-workflows" role="tabpanel" aria-labelledby="dash-tab-workflows">
+                  <div class="dash-view-header">
+                    <div class="dash-view-title-group">
+                      <span class="dash-view-title">
+                        <span data-i18n="wfTitle">Automated Workflows</span>
+                        <span class="kpi-badge badge-green" id="wf-active-counter" style="font-size:0.68rem;">3 of 4 Active</span>
+                      </span>
+                      <span class="dash-view-subtitle" data-i18n="wfSubtitle">Trigger events, automated pipelines, and cloud actions</span>
+                    </div>
+                    <div class="dash-view-actions">
+                      <button type="button" class="btn-dash-action btn-dash-primary" id="btn-new-workflow">
+                        <span data-i18n="wfNewBtn">+ New Workflow</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- 4 Interactive Automated Workflows -->
+                  <div class="dash-workflows-list">
+                    <!-- Workflow 1 -->
+                    <div class="dash-wf-card" data-wf-id="wf-1">
+                      <div class="dash-wf-left">
+                        <div class="dash-wf-icon" aria-hidden="true">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                        </div>
+                        <div class="dash-wf-details">
+                          <div class="dash-wf-title" data-i18n="wf1Name">GitHub Release &rarr; Edge Deploy &rarr; Slack Alert</div>
+                          <div class="dash-wf-desc" data-i18n="wf1Desc">Zero-downtime global rollout triggered on git tag creation</div>
+                        </div>
+                      </div>
+                      <div class="dash-wf-right">
+                        <button type="button" class="dash-switch is-checked" role="switch" aria-checked="true" aria-label="Toggle GitHub Release Workflow">
+                          <span class="dash-switch-knob"></span>
+                        </button>
+                        <button type="button" class="btn-dash-action btn-run-wf" data-wf-name="Edge Deploy">
+                          <span>&blacktriangleright;</span>
+                          <span data-i18n="wfRunNow">Run Test</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Workflow 2 -->
+                    <div class="dash-wf-card" data-wf-id="wf-2">
+                      <div class="dash-wf-left">
+                        <div class="dash-wf-icon" style="background:#dcfce7; color:#15803d;" aria-hidden="true">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                        </div>
+                        <div class="dash-wf-details">
+                          <div class="dash-wf-title" data-i18n="wf2Name">Failed Payment Retry &rarr; Webhook &rarr; Email Sequence</div>
+                          <div class="dash-wf-desc" data-i18n="wf2Desc">Smart grace period recovery with automated customer alerts</div>
+                        </div>
+                      </div>
+                      <div class="dash-wf-right">
+                        <button type="button" class="dash-switch is-checked" role="switch" aria-checked="true" aria-label="Toggle Payment Recovery Workflow">
+                          <span class="dash-switch-knob"></span>
+                        </button>
+                        <button type="button" class="btn-dash-action btn-run-wf" data-wf-name="Payment Recovery">
+                          <span>&blacktriangleright;</span>
+                          <span data-i18n="wfRunNow">Run Test</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Workflow 3 -->
+                    <div class="dash-wf-card" data-wf-id="wf-3">
+                      <div class="dash-wf-left">
+                        <div class="dash-wf-icon" style="background:#e0f2fe; color:#0369a1;" aria-hidden="true">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div class="dash-wf-details">
+                          <div class="dash-wf-title" data-i18n="wf3Name">New Customer Signup &rarr; Provision Cloud DB &rarr; Welcome Tour</div>
+                          <div class="dash-wf-desc" data-i18n="wf3Desc">Instant multi-tenant container and workspace provisioning</div>
+                        </div>
+                      </div>
+                      <div class="dash-wf-right">
+                        <button type="button" class="dash-switch is-checked" role="switch" aria-checked="true" aria-label="Toggle User Onboarding Workflow">
+                          <span class="dash-switch-knob"></span>
+                        </button>
+                        <button type="button" class="btn-dash-action btn-run-wf" data-wf-name="Tenant Provision">
+                          <span>&blacktriangleright;</span>
+                          <span data-i18n="wfRunNow">Run Test</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Workflow 4 -->
+                    <div class="dash-wf-card" data-wf-id="wf-4">
+                      <div class="dash-wf-left">
+                        <div class="dash-wf-icon" style="background:#fef3c7; color:#b45309;" aria-hidden="true">
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <div class="dash-wf-details">
+                          <div class="dash-wf-title" data-i18n="wf4Name">Weekly Compliance Export &rarr; SOC2 Audit &rarr; Encrypted S3</div>
+                          <div class="dash-wf-desc" data-i18n="wf4Desc">Cryptographic audit trail generated weekly on Sundays</div>
+                        </div>
+                      </div>
+                      <div class="dash-wf-right">
+                        <button type="button" class="dash-switch" role="switch" aria-checked="false" aria-label="Toggle Compliance Workflow">
+                          <span class="dash-switch-knob"></span>
+                        </button>
+                        <button type="button" class="btn-dash-action btn-run-wf" data-wf-name="SOC2 Audit">
+                          <span>&blacktriangleright;</span>
+                          <span data-i18n="wfRunNow">Run Test</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 4. VIEW: Team Members & Permissions -->
+                <div class="dash-view dash-view-team" id="dash-view-team" role="tabpanel" aria-labelledby="dash-tab-team">
+                  <div class="dash-view-header">
+                    <div class="dash-view-title-group">
+                      <span class="dash-view-title">
+                        <span data-i18n="teamTitle">Team Members & Permissions</span>
+                        <span class="kpi-badge badge-green" id="team-online-badge" data-i18n="teamOnlineBadge">5 Online Now</span>
+                      </span>
+                      <span class="dash-view-subtitle" data-i18n="teamSubtitle">Manage organization access, roles, and pending invitations</span>
+                    </div>
+                  </div>
+
+                  <!-- Toolbar with Search & Quick Invite -->
+                  <div class="dash-team-toolbar">
+                    <div class="dash-team-search-box">
+                      <svg class="dash-team-search-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                      <input type="text" id="team-search-input" class="dash-team-input" placeholder="Search team members by name, role, or ID / number..." data-i18n-placeholder="teamSearchPlaceholder" aria-label="Search team members by name, role, or ID" />
+                    </div>
+                    <div class="dash-team-invite-row">
+                      <input type="email" id="team-invite-email" class="dash-team-input" placeholder="colleague@company.com" style="width:190px;" />
+                      <button type="button" class="btn-dash-action btn-dash-primary" id="btn-team-invite">
+                        <span data-i18n="teamInviteBtn">+ Invite</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Team Member List -->
+                  <div class="dash-team-list" id="dash-team-list-container">
+                    <div class="dash-team-row" data-name="alex morgan" data-role="product lead owner" data-id="101" data-number="1" data-phone="0101">
+                      <div class="dash-member-left">
+                        <div class="dash-member-avatar" style="background:#635bff;">
+                          AM
+                          <span class="dash-avatar-dot"></span>
+                        </div>
+                        <div class="dash-member-info">
+                          <div style="display:flex; align-items:center; gap:0.35rem;">
+                            <span class="dash-member-name">Alex Morgan</span>
+                            <span class="dash-member-id" title="Member ID: #101">#101</span>
+                          </div>
+                          <span class="dash-member-role" data-i18n="teamRoleLead">Product Lead</span>
+                        </div>
+                      </div>
+                      <div class="dash-member-right">
+                        <span class="activity-tag tag-active" data-i18n="teamRoleOwner">Owner</span>
+                        <span class="activity-tag tag-success" data-i18n="teamActiveStatus">Online</span>
+                      </div>
+                    </div>
+
+                    <div class="dash-team-row" data-name="sarah chen" data-role="vp of product admin" data-id="102" data-number="2" data-phone="0102">
+                      <div class="dash-member-left">
+                        <div class="dash-member-avatar" style="background:#0ea5e9;">
+                          SC
+                          <span class="dash-avatar-dot"></span>
+                        </div>
+                        <div class="dash-member-info">
+                          <div style="display:flex; align-items:center; gap:0.35rem;">
+                            <span class="dash-member-name">Sarah Chen</span>
+                            <span class="dash-member-id" title="Member ID: #102">#102</span>
+                          </div>
+                          <span class="dash-member-role">VP of Product</span>
+                        </div>
+                      </div>
+                      <div class="dash-member-right">
+                        <span class="activity-tag tag-active" data-i18n="teamRoleAdmin">Admin</span>
+                        <span class="activity-tag tag-success" data-i18n="teamActiveStatus">Online</span>
+                      </div>
+                    </div>
+
+                    <div class="dash-team-row" data-name="david rodriguez" data-role="head of engineering admin" data-id="103" data-number="3" data-phone="0103">
+                      <div class="dash-member-left">
+                        <div class="dash-member-avatar" style="background:#10b981;">
+                          DR
+                          <span class="dash-avatar-dot"></span>
+                        </div>
+                        <div class="dash-member-info">
+                          <div style="display:flex; align-items:center; gap:0.35rem;">
+                            <span class="dash-member-name">David Rodriguez</span>
+                            <span class="dash-member-id" title="Member ID: #103">#103</span>
+                          </div>
+                          <span class="dash-member-role" data-i18n="teamRoleEng">Head of Engineering</span>
+                        </div>
+                      </div>
+                      <div class="dash-member-right">
+                        <span class="activity-tag tag-active" data-i18n="teamRoleAdmin">Admin</span>
+                        <span class="activity-tag tag-success" data-i18n="teamActiveStatus">Online</span>
+                      </div>
+                    </div>
+
+                    <div class="dash-team-row" data-name="aisha morales" data-role="director of operations member" data-id="104" data-number="4" data-phone="0104">
+                      <div class="dash-member-left">
+                        <div class="dash-member-avatar" style="background:#f59e0b;">
+                          AM
+                          <span class="dash-avatar-dot"></span>
+                        </div>
+                        <div class="dash-member-info">
+                          <div style="display:flex; align-items:center; gap:0.35rem;">
+                            <span class="dash-member-name">Aisha Morales</span>
+                            <span class="dash-member-id" title="Member ID: #104">#104</span>
+                          </div>
+                          <span class="dash-member-role" data-i18n="teamRoleOps">Director of Operations</span>
+                        </div>
+                      </div>
+                      <div class="dash-member-right">
+                        <span class="activity-tag" style="background:#f1f5f9; color:#475569;" data-i18n="teamRoleMember">Member</span>
+                        <span class="activity-tag tag-success" data-i18n="teamActiveStatus">Online</span>
+                      </div>
+                    </div>
+
+                    <div class="dash-team-row" data-name="ryan vance" data-role="devops engineer member" data-id="105" data-number="5" data-phone="0105">
+                      <div class="dash-member-left">
+                        <div class="dash-member-avatar" style="background:#8b5cf6;">
+                          RV
+                          <span class="dash-avatar-dot"></span>
+                        </div>
+                        <div class="dash-member-info">
+                          <div style="display:flex; align-items:center; gap:0.35rem;">
+                            <span class="dash-member-name">Ryan Vance</span>
+                            <span class="dash-member-id" title="Member ID: #105">#105</span>
+                          </div>
+                          <span class="dash-member-role" data-i18n="teamRoleDevops">DevOps Engineer</span>
+                        </div>
+                      </div>
+                      <div class="dash-member-right">
+                        <span class="activity-tag" style="background:#f1f5f9; color:#475569;" data-i18n="teamRoleMember">Member</span>
+                        <span class="activity-tag tag-success" data-i18n="teamActiveStatus">Online</span>
+                      </div>
+                    </div>
+
+                    <!-- Empty Search State -->
+                    <div id="team-empty-search" class="dash-team-empty" role="status" aria-live="polite">
+                      <span data-i18n="teamNoResults">No team members found matching your search.</span>
+                      <button type="button" class="btn-dash-action" id="btn-clear-team-search" style="margin-top:var(--space-1);">
+                        <span data-i18n="teamClearSearch">Clear search</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 5. VIEW: Settings -->
+                <div class="dash-view dash-view-settings" id="dash-view-settings" role="tabpanel" aria-labelledby="dash-tab-settings">
+                  <div class="dash-view-header">
+                    <div class="dash-view-title-group">
+                      <span class="dash-view-title" data-i18n="settingsTitle">Workspace Settings</span>
+                      <span class="dash-view-subtitle" data-i18n="settingsSubtitle">Manage your cluster preferences and API credentials</span>
+                    </div>
+                  </div>
+
+                  <div class="dash-settings-grid">
+                    <div class="dash-setting-item">
+                      <div class="dash-setting-label-group">
+                        <span class="dash-setting-label" data-i18n="settingsOrgLabel">Organization Name</span>
+                        <span class="dash-setting-desc">Primary workspace subdomain and billing identity</span>
+                      </div>
+                      <div class="dash-setting-control">
+                        <input type="text" class="dash-team-input" value="SaaS Launch HQ" style="width:160px;" />
+                      </div>
+                    </div>
+
+                    <div class="dash-setting-item">
+                      <div class="dash-setting-label-group">
+                        <span class="dash-setting-label" data-i18n="settingsRegionLabel">Primary Edge Region</span>
+                        <span class="dash-setting-desc">Route telemetry and multi-tenant DB replication</span>
+                      </div>
+                      <div class="dash-setting-control">
+                        <select class="dash-select">
+                          <option>Europe West (London)</option>
+                          <option>Europe Central (Frankfurt)</option>
+                          <option>US East (N. Virginia)</option>
+                          <option>Asia Pacific (Tokyo)</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="dash-setting-item">
+                      <div class="dash-setting-label-group">
+                        <span class="dash-setting-label" data-i18n="settingsApiKeyLabel">Production Live API Key</span>
+                        <span class="dash-setting-desc">Use for webhook ingress and authenticated SDK calls</span>
+                      </div>
+                      <div class="dash-setting-control">
+                        <code style="font-size:0.7rem; background:#f1f5f9; padding:0.25rem 0.5rem; border-radius:4px; color:#475569;">sk_live_94f8a1...73c2</code>
+                        <button type="button" class="btn-dash-action" id="btn-copy-api-key">
+                          <span id="copy-key-text" data-i18n="settingsCopyKey">Copy Key</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="dash-setting-item">
+                      <div class="dash-setting-label-group">
+                        <span class="dash-setting-label" data-i18n="settingsAutoDeploy">Automatic deployments on git push</span>
+                        <span class="dash-setting-desc">Trigger preview environments for pull requests</span>
+                      </div>
+                      <div class="dash-setting-control">
+                        <button type="button" class="dash-switch is-checked" role="switch" aria-checked="true" aria-label="Toggle Auto Deploy">
+                          <span class="dash-switch-knob"></span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Floating In-Mockup Toast Notification Container -->
+              <div id="dash-mockup-toast" class="dash-mockup-toast" aria-live="polite" aria-atomic="true"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decorative Wave Divider: Hero to Social Proof -->
+    <div class="section-divider section-divider-wave wave-to-surface" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path class="wave-contour" d="M0,24 C240,46 520,6 840,28 C1120,48 1320,12 1440,24" />
+        <path class="wave-fill" d="M0,24 C240,46 520,6 840,28 C1120,48 1320,12 1440,24 L1440,48 L0,48 Z" />
+      </svg>
+    </div>
+
+    <!-- =======================================================================
+         D. Social Proof Section
+         ======================================================================= -->
+    <section class="social-proof-section" id="social-proof" aria-label="Customer trust and statistics">
+      <div class="container">
+        <p class="proof-intro" data-i18n="proofIntro">Trusted by innovative teams building the future</p>
+        
+        <!-- 5 Fictional Company Wordmarks with SVG Marks -->
+        <div class="proof-logos-grid" role="list">
+          <div class="proof-logo-item" role="listitem">
+            <svg class="proof-logo-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <span>ApexFlow</span>
+          </div>
+          <div class="proof-logo-item" role="listitem">
+            <svg class="proof-logo-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><activity><circle cx="12" cy="12" r="10"/><path d="M8 12h2l2-3 2 6 2-3h2"/></activity></svg>
+            <span>PulseAI</span>
+          </div>
+          <div class="proof-logo-item" role="listitem">
+            <svg class="proof-logo-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+            <span>CloudScale</span>
+          </div>
+          <div class="proof-logo-item" role="listitem">
+            <svg class="proof-logo-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
+            <span>Vertex</span>
+          </div>
+          <div class="proof-logo-item" role="listitem">
+            <svg class="proof-logo-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/></svg>
+            <span>Lumina</span>
+          </div>
+        </div>
+
+        <!-- 3 Key Statistics -->
+        <div class="stats-strip">
+          <div class="stat-item">
+            <span class="stat-number" data-i18n="stat1Number">10,000+</span>
+            <span class="stat-label" data-i18n="stat1Label">Global Engineering Teams</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-i18n="stat2Number">99.9%</span>
+            <span class="stat-label" data-i18n="stat2Label">Guaranteed High-Availability Uptime</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-i18n="stat3Number">4.9/5</span>
+            <span class="stat-label" data-i18n="stat3Label">Customer Satisfaction Rating</span>
+          </div>
+        </div>
+
+        <p class="demo-disclaimer-note" data-i18n="proofDisclaimer">* Note: All company names, metrics, and statistics shown above are illustrative demo content for template demonstration purposes.</p>
+      </div>
+    </section>
+
+    <!-- Decorative Wave Divider: Social Proof to Features -->
+    <div class="section-divider section-divider-wave wave-to-bg" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path class="wave-contour" d="M0,24 C320,4 600,44 920,20 C1160,4 1340,40 1440,24" />
+        <path class="wave-fill" d="M0,24 C320,4 600,44 920,20 C1160,4 1340,40 1440,24 L1440,48 L0,48 Z" />
+      </svg>
+    </div>
+
+    <!-- =======================================================================
+         E. Features Section
+         ======================================================================= -->
+    <section class="features-section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="featuresEyebrow">CAPABILITIES</div>
+          <h2 id="features-title" class="section-title" data-i18n="featuresTitle">Everything You Need to Move Faster</h2>
+          <p class="section-subtitle" data-i18n="featuresSubtitle">Powerful tools, thoughtfully designed to help your team do its best work with maximum clarity and velocity.</p>
+        </header>
+
+        <!-- 6 Feature Cards in Responsive Grid -->
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <article class="feature-card reveal">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat1Title">Smart Project Management</h3>
+            <p class="feature-description" data-i18n="feat1Desc">Organize tasks, define milestones, and track deadlines with automated Kanban boards and intelligent roadmap scheduling.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="feature-card reveal">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat2Title">Real-Time Collaboration</h3>
+            <p class="feature-description" data-i18n="feat2Desc">Co-author documents, leave live inline comments, and synchronize team focus instantly without friction or lag.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="feature-card reveal">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat3Title">Advanced Analytics</h3>
+            <p class="feature-description" data-i18n="feat3Desc">Turn raw data into actionable clarity with deep engagement funnels, retention cohorts, and revenue visualizations.</p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="feature-card reveal">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat4Title">Workflow Automation</h3>
+            <p class="feature-description" data-i18n="feat4Desc">Eliminate repetitive operational friction with custom event triggers, automatic status updates, and webhooks.</p>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="feature-card reveal">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat5Title">Secure Cloud Storage</h3>
+            <p class="feature-description" data-i18n="feat5Desc">Keep your assets safe with zero-knowledge AES-256 encryption at rest, automatic regional backups, and role permissions.</p>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="feature-card reveal">
+            <div class="feature-icon-wrapper" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </div>
+            <h3 class="feature-title" data-i18n="feat6Title">Seamless Integrations</h3>
+            <p class="feature-description" data-i18n="feat6Desc">Connect your existing development, marketing, and design stack with over 100+ one-click native connectors.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decorative Wave Divider: Features to Product Showcase -->
+    <div class="section-divider section-divider-wave wave-to-surface" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path class="wave-contour" d="M0,20 C280,44 540,8 820,30 C1100,50 1300,16 1440,22" />
+        <path class="wave-fill" d="M0,20 C280,44 540,8 820,30 C1100,50 1300,16 1440,22 L1440,48 L0,48 Z" />
+      </svg>
+    </div>
+
+    <!-- =======================================================================
+         F. Product Showcase Section (3 Alternating Rows)
+         ======================================================================= -->
+    <section class="showcase-section" id="product" aria-label="Product Showcase">
+      <div class="container">
+        <div class="showcase-rows">
+          
+          <!-- Showcase Row 1: See Your Progress at a Glance -->
+          <div class="showcase-row reveal">
+            <div class="showcase-content">
+              <div class="section-eyebrow" data-i18n="showcase1Eyebrow">PERFORMANCE MONITORING</div>
+              <h2 class="showcase-heading" data-i18n="showcase1Title">See Your Progress at a Glance</h2>
+              <p class="showcase-text" data-i18n="showcase1Text">
+                Stay on top of every sprint milestone, customer milestone, and objective key result (OKR) with continuous visibility across your entire organization.
+              </p>
+              <div class="showcase-benefits">
+                <div class="benefit-item">
+                  <span class="benefit-check" aria-hidden="true">&check;</span>
+                  <span data-i18n="showcase1B1">Granular goal tracking with milestone completion metrics</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-check" aria-hidden="true">&check;</span>
+                  <span data-i18n="showcase1B2">Instant bottleneck detection before deadlines slip</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-check" aria-hidden="true">&check;</span>
+                  <span data-i18n="showcase1B3">Weekly automated summary digests sent directly to leadership</span>
+                </div>
+              </div>
+              <a href="#pricing" class="showcase-cta">
+                <span data-i18n="showcase1Cta">Start tracking your projects</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- Custom Mockup 1: Progress Tracker -->
+            <div class="showcase-mockup-card" aria-hidden="true">
+              <div class="goal-progress-list">
+                <div class="goal-item">
+                  <div class="goal-meta">
+                    <span class="goal-title" data-i18n="mockGoal1">Q3 Product Launch Deliverables</span>
+                    <span class="goal-percent">92%</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 92%;"></div>
+                  </div>
+                </div>
+
+                <div class="goal-item">
+                  <div class="goal-meta">
+                    <span class="goal-title" data-i18n="mockGoal2">Enterprise Security & SOC2 Compliance</span>
+                    <span class="goal-percent" data-i18n="mockGoal2Status">100% Complete</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 100%; background: #10b981;"></div>
+                  </div>
+                </div>
+
+                <div class="goal-item">
+                  <div class="goal-meta">
+                    <span class="goal-title" data-i18n="mockGoal3">Customer Onboarding Redesign</span>
+                    <span class="goal-percent">68%</span>
+                  </div>
+                  <div class="progress-bar-bg">
+                    <div class="progress-bar-fill" style="width: 68%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Showcase Row 2: Bring Your Team Together (Reversed Layout) -->
+          <div class="showcase-row is-reversed reveal">
+            <div class="showcase-content">
+              <div class="section-eyebrow" data-i18n="showcase2Eyebrow">SEAMLESS ALIGNMENT</div>
+              <h2 class="showcase-heading" data-i18n="showcase2Title">Bring Your Team Together</h2>
+              <p class="showcase-text" data-i18n="showcase2Text">
+                Break down organizational silos with unified workspaces where engineers, product managers, and designers can collaborate asynchronously in real time.
+              </p>
+              <div class="showcase-benefits">
+                <div class="benefit-item">
+                  <span class="benefit-check" aria-hidden="true">&check;</span>
+                  <span data-i18n="showcase2B1">Unified project channels with document attachments</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-check" aria-hidden="true">&check;</span>
+                  <span data-i18n="showcase2B2">Live presence indicators and collaborative editing</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-check" aria-hidden="true">&check;</span>
+                  <span data-i18n="showcase2B3">Customizable notification filters to prevent notification fatigue</span>
+                </div>
+              </div>
+              <a href="#features" class="showcase-cta">
+                <span data-i18n="showcase2Cta">Explore collaboration tools</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- Custom Mockup 2: Team Collaboration Board -->
+            <div class="showcase-mockup-card" aria-hidden="true">
+              <div class="team-collab-board">
+                <div class="team-header-mock">
+                  <div>
+                    <div style="font-size:0.85rem; font-weight:700; color:var(--color-text-heading);" data-i18n="teamHeaderSquad">Core Platform Squad</div>
+                    <div style="font-size:0.7rem; color:var(--color-text-muted);" data-i18n="teamOnlineCount">8 members online right now</div>
+                  </div>
+                  <div class="team-member-avatars">
+                    <div class="collab-avatar av-1">EL</div>
+                    <div class="collab-avatar av-2">MR</div>
+                    <div class="collab-avatar av-3">TK</div>
+                    <div class="collab-avatar av-4">+5</div>
+                  </div>
+                </div>
+
+                <div class="collab-feed-item">
+                  <div class="feed-avatar">MR</div>
+                  <div class="feed-text">
+                    <span data-i18n="feedMarcus">Marcus merged branch feat/v2-analytics</span>
+                  </div>
+                  <div class="feed-time" data-i18n="feedTime1">2m ago</div>
+                </div>
+
+                <div class="collab-feed-item">
+                  <div class="feed-avatar" style="background:#dcfce7; color:#166534;">EL</div>
+                  <div class="feed-text">
+                    <span data-i18n="feedElena">Elena updated sprint roadmap deliverables</span>
+                  </div>
+                  <div class="feed-time" data-i18n="feedTime2">14m ago</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Showcase Row 3: Automate the Busywork -->
+          <div class="showcase-row reveal">
+            <div class="showcase-content">
+              <div class="section-eyebrow" data-i18n="showcase3Eyebrow">NO-CODE AUTOMATION</div>
+              <h2 class="showcase-heading" data-i18n="showcase3Title">Automate the Busywork</h2>
+              <p class="showcase-text" data-i18n="showcase3Text">
+                Save dozens of hours every month by automating repetitive status updates, triage queues, ticket assignments, and deployment notifications.
+              </p>
+              <div class="showcase-benefits">
+                <div class="benefit-item">
+                  <span class="benefit-check" aria-hidden="true">&check;</span>
+                  <span data-i18n="showcase3B1">Visual if-this-then-that trigger and action designer</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-check" aria-hidden="true">&check;</span>
+                  <span data-i18n="showcase3B2">Pre-built templates for standard engineering and product workflows</span>
+                </div>
+                <div class="benefit-item">
+                  <span class="benefit-check" aria-hidden="true">&check;</span>
+                  <span data-i18n="showcase3B3">Real-time execution logs with instant rollback capabilities</span>
+                </div>
+              </div>
+              <a href="#pricing" class="showcase-cta">
+                <span data-i18n="showcase3Cta">Build your first automation</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+
+            <!-- Custom Mockup 3: Pipeline Automation Flow -->
+            <div class="showcase-mockup-card" aria-hidden="true">
+              <div class="pipeline-flow">
+                <div class="pipeline-node">
+                  <div class="node-icon node-trigger">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                  </div>
+                  <div class="node-info">
+                    <span class="node-title" data-i18n="pipelineTriggerTitle">Trigger: Issue Status &rarr; "Done"</span>
+                    <span class="node-sub" data-i18n="pipelineTriggerSub">Runs on all repository pull requests</span>
+                  </div>
+                  <span class="node-status" data-i18n="pipelineStatusActive">Active</span>
+                </div>
+
+                <div class="pipeline-connector"></div>
+
+                <div class="pipeline-node">
+                  <div class="node-icon node-filter">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                  </div>
+                  <div class="node-info">
+                    <span class="node-title" data-i18n="pipelineConditionTitle">Condition: Priority &ge; High</span>
+                    <span class="node-sub" data-i18n="pipelineConditionSub">Filter targets critical milestone tasks</span>
+                  </div>
+                  <span class="node-status" data-i18n="pipelineStatusVerified">Verified</span>
+                </div>
+
+                <div class="pipeline-connector"></div>
+
+                <div class="pipeline-node">
+                  <div class="node-icon node-action">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                  </div>
+                  <div class="node-info">
+                    <span class="node-title" data-i18n="pipelineActionTitle">Action: Notify #release-deploy Slack</span>
+                    <span class="node-sub" data-i18n="pipelineActionSub">Includes changelog and pull request diff</span>
+                  </div>
+                  <span class="node-status" data-i18n="pipelineStatusTriggered">Triggered</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Decorative Wave Divider: Product Showcase to How It Works -->
+    <div class="section-divider section-divider-wave wave-to-bg" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path class="wave-contour" d="M0,28 C280,6 560,46 880,18 C1140,42 1320,8 1440,24" />
+        <path class="wave-fill" d="M0,28 C280,6 560,46 880,18 C1140,42 1320,8 1440,24 L1440,48 L0,48 Z" />
+      </svg>
+    </div>
+
+    <!-- =======================================================================
+         G. How It Works Section
+         ======================================================================= -->
+    <section class="how-it-works-section" id="how-it-works" aria-labelledby="how-it-works-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="howEyebrow">SIMPLE ONBOARDING</div>
+          <h2 id="how-it-works-title" class="section-title" data-i18n="howTitle">Get Up and Running in 3 Steps</h2>
+          <p class="section-subtitle" data-i18n="howSubtitle">No long consultation calls or painful setup processes. You can deploy your workspace in under two minutes.</p>
+        </header>
+
+        <div class="steps-grid">
+          <!-- Step 1 -->
+          <article class="step-card reveal">
+            <div class="step-badge" aria-label="Step 1">1</div>
+            <h3 class="step-title" data-i18n="step1Title">Create Your Workspace</h3>
+            <p class="step-desc" data-i18n="step1Desc">Sign up in seconds, name your organization, and select your preferred team layout and workflow templates.</p>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="step-card reveal">
+            <div class="step-badge" aria-label="Step 2">2</div>
+            <h3 class="step-title" data-i18n="step2Title">Invite Your Team</h3>
+            <p class="step-desc" data-i18n="step2Desc">Share an instant invite link or sync members automatically through Google Workspace, GitHub, or Okta SSO.</p>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="step-card reveal">
+            <div class="step-badge" aria-label="Step 3">3</div>
+            <h3 class="step-title" data-i18n="step3Title">Start Building and Growing</h3>
+            <p class="step-desc" data-i18n="step3Desc">Coordinate projects, automate status updates, and measure real progress with clear visual dashboards.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decorative Accent Line Divider: How It Works to Pricing -->
+    <div class="section-divider section-divider-line" aria-hidden="true">
+      <span class="divider-line-emblem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15 12 12 22 9 12" />
+        </svg>
+      </span>
+    </div>
+
+    <!-- =======================================================================
+         H. Pricing Section
+         ======================================================================= -->
+    <section class="pricing-section" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="pricingEyebrow">TRANSPARENT PRICING</div>
+          <h2 id="pricing-title" class="section-title" data-i18n="pricingTitle">Simple Pricing That Scales With You</h2>
+          <p class="section-subtitle" data-i18n="pricingSubtitle">Choose the plan that fits your current stage. Upgrade, downgrade, or cancel anytime with zero friction.</p>
+        </header>
+
+        <!-- Monthly / Yearly Billing Toggle -->
+        <div class="pricing-toggle-wrapper reveal">
+          <span id="toggle-label-monthly" class="toggle-label is-active" data-i18n="pricingMonthly">Monthly Billing</span>
+          <button type="button" id="pricing-toggle" class="toggle-switch" role="switch" aria-checked="false" aria-label="Toggle annual billing discount">
+            <span class="toggle-thumb"></span>
+          </button>
+          <span id="toggle-label-yearly" class="toggle-label" data-i18n="pricingYearly">Yearly Billing</span>
+          <span class="discount-badge" data-i18n="pricingDiscount">Save 20%</span>
+        </div>
+
+        <!-- 3 Pricing Cards -->
+        <div class="pricing-grid">
+          
+          <!-- Starter Plan ($0) -->
+          <article class="pricing-card reveal">
+            <div class="plan-header">
+              <h3 class="plan-name" data-i18n="planStarterName">Starter</h3>
+              <p class="plan-description" data-i18n="planStarterDesc">For small teams and individual creators getting started.</p>
+            </div>
+            <div class="plan-price-block">
+              <span class="plan-currency">$</span>
+              <span class="plan-price-amount" id="price-starter">0</span>
+              <span class="plan-period" id="period-starter">/mo</span>
+            </div>
+            <div class="plan-billed-note" id="billed-starter" data-i18n="planStarterBilled">Free forever for small teams</div>
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planStarterF1">Up to 3 team members</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planStarterF2">2 active projects</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planStarterF3">Basic analytics</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planStarterF4">Community support</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-secondary plan-cta-btn" data-open-signup data-plan="starter" data-i18n="planStarterCta">Get Started Free</button>
+          </article>
+
+          <!-- Pro Plan ($19) — Popular Highlight -->
+          <article class="pricing-card is-popular reveal">
+            <span class="popular-ribbon" data-i18n="planProBadge">Most Popular</span>
+            <div class="plan-header">
+              <h3 class="plan-name" data-i18n="planProName">Pro</h3>
+              <p class="plan-description" data-i18n="planProDesc">For scaling teams and growing digital companies.</p>
+            </div>
+            <div class="plan-price-block">
+              <span class="plan-currency">$</span>
+              <span class="plan-price-amount" id="price-pro">19</span>
+              <span class="plan-period" id="period-pro">/mo</span>
+            </div>
+            <div class="plan-billed-note" id="billed-pro" data-i18n="planProBilled">Billed monthly, cancel anytime</div>
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planProF1">Up to 10 team members</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planProF2">Unlimited projects</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planProF3">Advanced analytics</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planProF4">Workflow automation</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planProF5">Priority email support</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-primary plan-cta-btn" data-open-signup data-plan="pro" data-i18n="planProCta">Start Pro Trial</button>
+          </article>
+
+          <!-- Business Plan ($49) -->
+          <article class="pricing-card reveal">
+            <div class="plan-header">
+              <h3 class="plan-name" data-i18n="planBizName">Business</h3>
+              <p class="plan-description" data-i18n="planBizDesc">For established organizations requiring enterprise power.</p>
+            </div>
+            <div class="plan-price-block">
+              <span class="plan-currency">$</span>
+              <span class="plan-price-amount" id="price-business">49</span>
+              <span class="plan-period" id="period-business">/mo</span>
+            </div>
+            <div class="plan-billed-note" id="billed-business" data-i18n="planBizBilled">Billed monthly, cancel anytime</div>
+            <ul class="plan-features-list">
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planBizF1">Unlimited team members</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planBizF2">Advanced permissions & RBAC</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planBizF3">Custom workflows & Webhooks</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planBizF4">Team reporting & audit logs</span>
+              </li>
+              <li class="plan-feature-item">
+                <span class="plan-feature-icon" aria-hidden="true">&check;</span>
+                <span data-i18n="planBizF5">Dedicated support & SLA</span>
+              </li>
+            </ul>
+            <button type="button" class="btn btn-secondary plan-cta-btn" data-open-signup data-plan="business" data-i18n="planBizCta">Choose Business</button>
+          </article>
+
+        </div>
+
+        <p class="pricing-disclaimer" data-i18n="pricingDisclaimer">
+          * Note: Prices shown above are sample placeholder rates for commercial template demonstration.
+        </p>
+      </div>
+    </section>
+
+    <!-- Decorative Accent Line Divider: Pricing to Testimonials -->
+    <div class="section-divider section-divider-line" aria-hidden="true">
+      <span class="divider-line-emblem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4" />
+          <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+        </svg>
+      </span>
+    </div>
+
+    <!-- =======================================================================
+         I. Testimonials Section
+         ======================================================================= -->
+    <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="testEyebrow">CUSTOMER STORIES</div>
+          <h2 id="testimonials-title" class="section-title" data-i18n="testTitle">Loved by Teams Like Yours</h2>
+          <p class="section-subtitle" data-i18n="testSubtitle">Discover how forward-thinking leaders leverage SaaS Launch to ship products faster and maintain focus.</p>
+        </header>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <article class="testimonial-card reveal">
+            <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="testimonial-text" data-i18n="test1Quote">
+              "Switching our product management to this template transformed our weekly sprints. We cut meeting times by nearly 40% and our team has never been more aligned."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-grad-1" aria-hidden="true">SC</div>
+              <div class="author-info">
+                <span class="author-name" data-i18n="test1Author">Sarah Chen</span>
+                <span class="author-role" data-i18n="test1Role">VP of Product &middot; ApexFlow (Demo)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 2 -->
+          <article class="testimonial-card reveal">
+            <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="testimonial-text" data-i18n="test2Quote">
+              "The automated workflow triggers saved our DevOps engineers hours of manual status syncing each week. It paid for itself in the first 48 hours."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-grad-2" aria-hidden="true">DR</div>
+              <div class="author-info">
+                <span class="author-name" data-i18n="test2Author">David Rodriguez</span>
+                <span class="author-role" data-i18n="test2Role">Head of Engineering &middot; PulseAI (Demo)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Testimonial 3 -->
+          <article class="testimonial-card reveal">
+            <svg class="quote-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="testimonial-text" data-i18n="test3Quote">
+              "The design is clean, fast, and extremely pleasant to use every day. Our entire operations squad adopted it without needing a single onboarding session."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-grad-3" aria-hidden="true">AM</div>
+              <div class="author-info">
+                <span class="author-name" data-i18n="test3Author">Aisha Morales</span>
+                <span class="author-role" data-i18n="test3Role">Director of Operations &middot; Lumina (Demo)</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="demo-disclaimer-note" data-i18n="testDisclaimer">* Note: All testimonials and customer identities above are fictional illustrative content for demo purposes.</p>
+      </div>
+    </section>
+
+    <!-- Decorative Wave Divider: Testimonials to Integrations -->
+    <div class="section-divider section-divider-wave wave-to-surface" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path class="wave-contour" d="M0,22 C300,48 560,10 860,32 C1140,48 1320,16 1440,24" />
+        <path class="wave-fill" d="M0,22 C300,48 560,10 860,32 C1140,48 1320,16 1440,24 L1440,48 L0,48 Z" />
+      </svg>
+    </div>
+
+    <!-- =======================================================================
+         J. Integrations Section
+         ======================================================================= -->
+    <section class="integrations-section" id="integrations" aria-labelledby="integrations-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="integEyebrow">ECOSYSTEM</div>
+          <h2 id="integrations-title" class="section-title" data-i18n="integTitle">Works With the Tools You Already Love</h2>
+          <p class="section-subtitle" data-i18n="integSubtitle">Seamlessly link your essential apps without writing complicated glue code or managing webhooks.</p>
+        </header>
+
+        <!-- 6 Illustrative Integration Cards -->
+        <div class="integrations-grid">
+          <!-- Slack -->
+          <div class="integration-card reveal">
+            <div class="integration-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e01e5a" stroke-width="2"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"/><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"/><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"/></svg>
+            </div>
+            <div class="integration-details">
+              <span class="integration-name">Slack</span>
+              <span class="integration-category" data-i18n="integCat1">Team Communication</span>
+            </div>
+            <span class="integration-badge" data-i18n="integConnect">Connect</span>
+          </div>
+
+          <!-- Notion -->
+          <div class="integration-card reveal">
+            <div class="integration-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2"><path d="M4 4v16h16V4H4zm12 12H8v-2h8v2zm0-4H8v-2h8v2zm0-4H8V6h8v2z"/></svg>
+            </div>
+            <div class="integration-details">
+              <span class="integration-name">Notion</span>
+              <span class="integration-category" data-i18n="integCat2">Knowledge Base & Docs</span>
+            </div>
+            <span class="integration-badge" data-i18n="integConnect">Connect</span>
+          </div>
+
+          <!-- Google Drive -->
+          <div class="integration-card reveal">
+            <div class="integration-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0f9d58" stroke-width="2"><polygon points="12 2 2 19 8 19 18 2 12 2"/><polygon points="12 2 22 19 16 19 6 2 12 2"/></svg>
+            </div>
+            <div class="integration-details">
+              <span class="integration-name">Google Drive</span>
+              <span class="integration-category" data-i18n="integCat3">Cloud Storage</span>
+            </div>
+            <span class="integration-badge" data-i18n="integConnect">Connect</span>
+          </div>
+
+          <!-- GitHub -->
+          <div class="integration-card reveal">
+            <div class="integration-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#24292f" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </div>
+            <div class="integration-details">
+              <span class="integration-name">GitHub</span>
+              <span class="integration-category" data-i18n="integCat4">Source Control & CI</span>
+            </div>
+            <span class="integration-badge" data-i18n="integConnect">Connect</span>
+          </div>
+
+          <!-- Figma -->
+          <div class="integration-card reveal">
+            <div class="integration-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#a259ff" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M6 3h6v6H6z"/><path d="M12 3h6v6h-6z"/><path d="M6 9h6v6H6z"/><path d="M6 15h6v6H6z"/></svg>
+            </div>
+            <div class="integration-details">
+              <span class="integration-name">Figma</span>
+              <span class="integration-category" data-i18n="integCat5">Product Design</span>
+            </div>
+            <span class="integration-badge" data-i18n="integConnect">Connect</span>
+          </div>
+
+          <!-- Zapier -->
+          <div class="integration-card reveal">
+            <div class="integration-icon-box" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ff4a00" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>
+            </div>
+            <div class="integration-details">
+              <span class="integration-name">Zapier</span>
+              <span class="integration-category" data-i18n="integCat6">Workflow Linking</span>
+            </div>
+            <span class="integration-badge" data-i18n="integConnect">Connect</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decorative Wave Divider: Integrations to FAQ -->
+    <div class="section-divider section-divider-wave wave-to-bg" aria-hidden="true">
+      <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+        <path class="wave-contour" d="M0,26 C260,8 540,44 860,16 C1120,40 1320,10 1440,24" />
+        <path class="wave-fill" d="M0,26 C260,8 540,44 860,16 C1120,40 1320,10 1440,24 L1440,48 L0,48 Z" />
+      </svg>
+    </div>
+
+    <!-- =======================================================================
+         K. FAQ Section
+         ======================================================================= -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="faqEyebrow">COMMON QUESTIONS</div>
+          <h2 id="faq-title" class="section-title" data-i18n="faqTitle">Frequently Asked Questions</h2>
+          <p class="section-subtitle" data-i18n="faqSubtitle">Got questions? We have answers. If you need further help, our support team is available 24/7.</p>
+        </header>
+
+        <div class="faq-accordion-container" role="region" aria-label="Frequently Asked Questions">
+          
+          <!-- Q1 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-1" id="faq-btn-1">
+              <span data-i18n="faqQ1">What is SaaS Launch?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div id="faq-ans-1" class="faq-answer-panel" role="region" aria-labelledby="faq-btn-1">
+              <div class="faq-answer-content" data-i18n="faqA1">
+                SaaS Launch is a complete, modern SaaS landing page template and web application starter. It is engineered with pure semantic HTML5, CSS3, and vanilla JavaScript to provide maximum performance, rapid customization, and high conversion rates for startup founders and front-end developers.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q2 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-2" id="faq-btn-2">
+              <span data-i18n="faqQ2">Is there a free plan?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div id="faq-ans-2" class="faq-answer-panel" role="region" aria-labelledby="faq-btn-2">
+              <div class="faq-answer-content" data-i18n="faqA2">
+                Yes! Our Starter tier is completely free forever for small teams up to 3 members. It includes 2 active projects, basic reporting, and full community support.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q3 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-3" id="faq-btn-3">
+              <span data-i18n="faqQ3">Can I cancel my subscription anytime?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div id="faq-ans-3" class="faq-answer-panel" role="region" aria-labelledby="faq-btn-3">
+              <div class="faq-answer-content" data-i18n="faqA3">
+                Absolutely. You can cancel your subscription with a single click from your organization settings at any time. There are no lock-in contracts, termination fees, or complicated cancellation procedures.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q4 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-4" id="faq-btn-4">
+              <span data-i18n="faqQ4">Do I need a credit card to start?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div id="faq-ans-4" class="faq-answer-panel" role="region" aria-labelledby="faq-btn-4">
+              <div class="faq-answer-content" data-i18n="faqA4">
+                No credit card is required to begin your 14-day free trial on our Pro plan, nor is one required to use the free Starter plan. You only provide payment credentials when you decide to continue after the trial.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q5 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-5" id="faq-btn-5">
+              <span data-i18n="faqQ5">Can I invite my team members?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div id="faq-ans-5" class="faq-answer-panel" role="region" aria-labelledby="faq-btn-2">
+              <div class="faq-answer-content" data-i18n="faqA5">
+                Yes, you can invite coworkers by email address, shareable workspace join links, or Google Workspace / SAML single sign-on synchronization depending on your subscription level.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q6 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-6" id="faq-btn-6">
+              <span data-i18n="faqQ6">Is my data secure?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div id="faq-ans-6" class="faq-answer-panel" role="region" aria-labelledby="faq-btn-6">
+              <div class="faq-answer-content" data-i18n="faqA6">
+                Security is our foundational priority. All data is encrypted in transit using TLS 1.3 and at rest using AES-256. We conduct regular third-party audits and offer SOC2 Type II compliance reports for enterprise partners.
+              </div>
+            </div>
+          </div>
+
+          <!-- Q7 -->
+          <div class="faq-item reveal">
+            <button type="button" class="faq-question-btn" aria-expanded="false" aria-controls="faq-ans-7" id="faq-btn-7">
+              <span data-i18n="faqQ7">Can I upgrade or downgrade my plan?</span>
+              <svg class="faq-icon-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div id="faq-ans-7" class="faq-answer-panel" role="region" aria-labelledby="faq-btn-7">
+              <div class="faq-answer-content" data-i18n="faqA7">
+                Yes, you can seamlessly upgrade or downgrade anytime. Pro-rated billing is calculated automatically so you only ever pay for what you actually use.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Decorative Accent Line Divider: FAQ to Final CTA -->
+    <div class="section-divider section-divider-line" aria-hidden="true">
+      <span class="divider-line-emblem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15 12 12 22 9 12" />
+        </svg>
+      </span>
+    </div>
+
+    <!-- =======================================================================
+         L. Final CTA Section
+         ======================================================================= -->
+    <section class="final-cta-section" id="cta" aria-labelledby="final-cta-heading">
+      <div class="container">
+        <div class="final-cta-card reveal">
+          <div class="final-cta-bg-glow" aria-hidden="true"></div>
+          <div class="final-cta-content">
+            <h2 id="final-cta-heading" class="final-cta-title" data-i18n="ctaTitle">Ready to Build Something Amazing?</h2>
+            <p class="final-cta-subtitle" data-i18n="ctaSubtitle">Join the next generation of teams working smarter, automating busywork, and moving faster every single day.</p>
+            <div class="final-cta-buttons">
+              <button type="button" class="btn btn-white btn-lg" data-open-signup data-plan="pro" id="btn-final-cta-trial">
+                <span data-i18n="ctaBtnTrial">Start Your Free Trial</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+              <a href="#contact" class="btn btn-secondary btn-lg" style="background:rgba(255,255,255,0.15); color:#fff; border-color:rgba(255,255,255,0.3);" id="btn-final-cta-sales" data-i18n="ctaBtnSales">
+                Talk to Sales
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Decorative Accent Line Divider: Final CTA to Contact -->
+    <div class="section-divider section-divider-line" aria-hidden="true">
+      <span class="divider-line-emblem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3" />
+          <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+        </svg>
+      </span>
+    </div>
+
+    <!-- =======================================================================
+         M. Contact Section
+         ======================================================================= -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-header reveal">
+          <div class="section-eyebrow" data-i18n="contactEyebrow">GET IN TOUCH</div>
+          <h2 id="contact-title" class="section-title" data-i18n="contactTitle">Have a Question or Custom Need?</h2>
+          <p class="section-subtitle" data-i18n="contactSubtitle">Send us a note. Our customer solutions team will get back to you within 24 business hours.</p>
+        </header>
+
+        <div class="contact-card reveal">
+          <!-- Demo Success Banner -->
+          <div id="contact-success-banner" class="contact-success-banner" role="alert">
+            <div style="font-weight:700; margin-bottom:0.25rem;" data-i18n="contactSuccessTitle">Message Received!</div>
+            <div data-i18n="contactSuccessMsg">Thank you for reaching out. (Front-end demo note: Your submission has been validated successfully in the browser).</div>
+          </div>
+
+          <form id="contact-form" class="contact-form" novalidate>
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label for="contact-name" class="form-label" data-i18n="contactNameLabel">Full Name *</label>
+                <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Jane Doe" data-i18n-placeholder="placeholderContactName" required />
+                <span class="form-error-msg"></span>
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label" data-i18n="contactEmailLabel">Work Email *</label>
+                <input type="email" id="contact-email" name="email" class="form-input" placeholder="jane@company.com" data-i18n-placeholder="placeholderContactEmail" required />
+                <span class="form-error-msg"></span>
+              </div>
+            </div>
+
+            <div class="form-row-2col">
+              <div class="form-group">
+                <label for="contact-company" class="form-label"><span data-i18n="contactCompanyLabel">Company Name</span> <span style="font-weight:normal; color:var(--color-text-muted);" data-i18n="contactCompanyOpt">(Optional)</span></label>
+                <input type="text" id="contact-company" name="company" class="form-input" placeholder="Your startup or company" data-i18n-placeholder="placeholderContactCompany" />
+              </div>
+              <div class="form-group">
+                <label for="contact-subject" class="form-label" data-i18n="contactSubjectLabel">Subject *</label>
+                <input type="text" id="contact-subject" name="subject" class="form-input" placeholder="e.g. Enterprise plan inquiry" data-i18n-placeholder="placeholderContactSubject" required />
+                <span class="form-error-msg"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label" data-i18n="contactMessageLabel">Message *</label>
+              <textarea id="contact-message" name="message" rows="4" class="form-textarea" placeholder="Tell us how we can help your team..." data-i18n-placeholder="placeholderContactMessage" required></textarea>
+              <span class="form-error-msg"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg w-full" id="contact-submit-btn" data-i18n="contactSubmitBtn">
+              Send Message
+            </button>
+
+            <p class="contact-demo-disclaimer" data-i18n="contactDisclaimer">
+              * Front-end demo notice: Form inputs are validated locally and simulate submission feedback without transmitting data to a live backend.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Decorative Wave Divider: Main Content to Footer -->
+  <div class="section-divider section-divider-wave wave-to-footer" aria-hidden="true">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none">
+      <path class="wave-contour" d="M0,24 C280,48 540,12 840,32 C1100,48 1300,16 1440,24" />
+      <path class="wave-fill" d="M0,24 C280,48 540,12 840,32 C1100,48 1300,16 1440,24 L1440,48 L0,48 Z" />
+    </svg>
+  </div>
+
+  <!-- =========================================================================
+       N. Footer
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-col">
+          <a href="#" class="brand-logo" aria-label="SaaS Launch Home">
+            <div class="logo-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <span>SaaS Launch</span>
+          </a>
+          <p class="footer-desc" data-i18n="footerDesc">
+            A commercial-grade, modern SaaS landing page template crafted for startups, digital creators, and conversion-focused web applications.
+          </p>
+          <!-- Social Media Links -->
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Twitter / X">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="GitHub">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Discord">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6h0a14.5 14.5 0 0 0-4-1.2 11.5 11.5 0 0 0-.5 1.2 12.8 12.8 0 0 0-3 0 11.5 11.5 0 0 0-.5-1.2A14.5 14.5 0 0 0 6 6a15.8 15.8 0 0 0-2 8.5c1.3 1 2.6 1.7 4 2.1.3-.4.6-.9.9-1.4-1.4-.5-2.2-1.3-2.2-1.3l.4-.3c2.8 1.3 5.8 1.3 8.6 0l.4.3s-.8.8-2.2 1.3c.3.5.6 1 .9 1.4 1.4-.4 2.7-1.1 4-2.1A15.8 15.8 0 0 0 18 6zM8.5 12c-.8 0-1.5-.7-1.5-1.5S7.7 9 8.5 9s1.5.7 1.5 1.5-.7 1.5-1.5 1.5zm7 0c-.8 0-1.5-.7-1.5-1.5s.7-1.5 1.5-1.5 1.5.7 1.5 1.5-.7 1.5-1.5 1.5z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 1: Product -->
+        <div class="footer-nav-col">
+          <span class="footer-col-title" data-i18n="footerColProduct">Product</span>
+          <div class="footer-links-list">
+            <a href="#features" class="footer-link" data-i18n="footerLinkFeatures">Core Features</a>
+            <a href="#product" class="footer-link" data-i18n="footerLinkProduct">Product Showcase</a>
+            <a href="#how-it-works" class="footer-link" data-i18n="footerLinkHow">How It Works</a>
+            <a href="#integrations" class="footer-link" data-i18n="footerLinkIntegrations">Integrations</a>
+            <a href="#pricing" class="footer-link" data-i18n="footerLinkPricing">Pricing Plans</a>
+          </div>
+        </div>
+
+        <!-- Col 2: Company -->
+        <div class="footer-nav-col">
+          <span class="footer-col-title" data-i18n="footerColCompany">Company</span>
+          <div class="footer-links-list">
+            <a href="#hero" class="footer-link" data-i18n="footerLinkAbout">About SaaS Launch</a>
+            <a href="#testimonials" class="footer-link" data-i18n="footerLinkStories">Customer Stories</a>
+            <a href="#contact" class="footer-link" data-i18n="footerLinkContact">Contact Sales</a>
+            <a href="#contact" class="footer-link" data-i18n="footerLinkCareers">Careers (Hiring)</a>
+            <a href="#contact" class="footer-link" data-i18n="footerLinkPress">Press & Media Kit</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Resources -->
+        <div class="footer-nav-col">
+          <span class="footer-col-title" data-i18n="footerColResources">Resources</span>
+          <div class="footer-links-list">
+            <a href="/docs/documentation.md" class="footer-link" data-i18n="footerLinkDocs">Template Documentation</a>
+            <a href="#faq" class="footer-link" data-i18n="footerLinkFaq">Help Center & FAQ</a>
+            <a href="#contact" class="footer-link" data-i18n="footerLinkDiscord">Community Discord</a>
+            <a href="#hero" class="footer-link" data-i18n="footerLinkStatus">System Status (99.9%)</a>
+            <a href="#pricing" class="footer-link" data-i18n="footerLinkRoadmap">Roadmap & Releases</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div>
+          &copy; <span id="current-year">2026</span> <span data-i18n="footerCopy">SaaS Launch Inc. All rights reserved. (Demo Template)</span>
+        </div>
+        <div class="footer-legal-links">
+          <a href="#contact" class="footer-legal-link" data-i18n="footerLegalPrivacy">Privacy Policy</a>
+          <span aria-hidden="true">&middot;</span>
+          <a href="#contact" class="footer-legal-link" data-i18n="footerLegalTerms">Terms of Service</a>
+          <span aria-hidden="true">&middot;</span>
+          <a href="#contact" class="footer-legal-link" data-i18n="footerLegalSecurity">Security Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       Interactive Signup & Demo Modal
+       ========================================================================= -->
+  <div id="signup-modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 id="modal-title" class="modal-title" data-i18n="modalTitle">Start Your Free Trial</h3>
+        <button type="button" id="modal-close-btn" class="modal-close-btn" aria-label="Close signup dialog">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- Plan selector tabs inside modal -->
+        <div class="modal-plan-selector">
+          <div class="plan-select-tabs" role="tablist">
+            <button type="button" class="plan-tab-btn" data-plan="starter" role="tab" data-i18n="modalPlanStarter">Starter ($0)</button>
+            <button type="button" class="plan-tab-btn is-active" data-plan="pro" role="tab" data-i18n="modalPlanPro">Pro ($19)</button>
+            <button type="button" class="plan-tab-btn" data-plan="business" role="tab" data-i18n="modalPlanBusiness">Business ($49)</button>
+          </div>
+        </div>
+
+        <!-- Interactive Form -->
+        <form id="modal-signup-form" class="modal-signup-form" novalidate>
+          <input type="hidden" id="signup-plan-selected" name="plan" value="pro" />
+
+          <div class="form-group">
+            <label for="signup-name" class="form-label" data-i18n="modalNameLabel">Full Name</label>
+            <input type="text" id="signup-name" name="name" class="form-input" placeholder="e.g. Alex Morgan" required />
+            <span class="form-error-msg"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-email" class="form-label" data-i18n="modalEmailLabel">Work Email</label>
+            <input type="email" id="signup-email" name="email" class="form-input" placeholder="alex@company.com" required />
+            <span class="form-error-msg"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="signup-password" class="form-label" data-i18n="modalPassLabel">Password (min. 6 characters)</label>
+            <input type="password" id="signup-password" name="password" class="form-input" placeholder="••••••••" required minlength="6" />
+            <span class="form-error-msg"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg w-full" id="signup-submit-btn" style="margin-top:0.5rem;" data-i18n="modalSubmitBtn">
+            Create Free Account
+          </button>
+
+          <p style="font-size:0.75rem; color:var(--color-text-muted); text-align:center;" data-i18n="modalConsent">
+            By signing up, you agree to our Terms of Service and Privacy Policy. No payment information is collected.
+          </p>
+        </form>
+
+        <!-- Success Confirmation View -->
+        <div id="modal-success-view" class="modal-success-view">
+          <div class="modal-success-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h4 style="font-size:1.25rem; font-weight:800; color:var(--color-text-heading); margin-bottom:0.5rem;" data-i18n="modalSuccessTitle">Welcome to SaaS Launch!</h4>
+          <p style="font-size:0.875rem; color:var(--color-text-body); margin-bottom:1.5rem;">
+            <span data-i18n="modalSuccessMsg1">Your</span> <span id="modal-success-plan-name" style="font-weight:700; color:var(--color-primary);">PRO</span> <span data-i18n="modalSuccessMsg2">workspace has been initialized in demo mode.</span>
+          </p>
+          <button type="button" id="modal-success-dismiss" class="btn btn-primary w-full" data-i18n="modalSuccessBtn">
+            Done (Explore Template)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       Floating Back to Top Button
+       ========================================================================= -->
+  <button type="button" id="back-to-top" class="back-to-top" aria-label="Scroll back to top of page">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- Vanilla JavaScript Module -->
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>
