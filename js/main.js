@@ -74,6 +74,7 @@ function initApplication() {
   initScrollReveal();
   initCurrentYear();
   initDashboardTabs();
+  initTeamSearch();
 }
 
 if (document.readyState === "loading") {
@@ -908,83 +909,8 @@ function initDashboardTabs() {
     });
   }
 
-  // Team: Real-time Member Search Filtering (Supports Name, Role, Member ID, Index/Number, Phone)
-  const teamSearchInput = document.getElementById("team-search-input");
-  const teamListContainer = document.getElementById("dash-team-list-container");
-  const teamEmptyState = document.getElementById("team-empty-search");
-  const clearTeamSearchBtn = document.getElementById("btn-clear-team-search");
-
-  // Helper: Normalize Arabic-Indic and Eastern digits to standard 0-9 digits and trim
-  function normalizeSearchString(val) {
-    if (!val) return "";
-    const arabicDigits = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
-    const farsiDigits = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
-    let s = String(val);
-    for (let i = 0; i < 10; i++) {
-      s = s.split(arabicDigits[i]).join(String(i));
-      s = s.split(farsiDigits[i]).join(String(i));
-    }
-    return s.toLowerCase().trim();
-  }
-
-  function filterTeamList(rawQuery) {
-    if (!teamListContainer) return;
-    const normalized = normalizeSearchString(rawQuery);
-    // Strip leading hash, number signs or whitespace (e.g., "#101" -> "101", "#1" -> "1")
-    const cleanNumQuery = normalized.replace(/^[#№]\s*/, "");
-    const rows = teamListContainer.querySelectorAll(".dash-team-row");
-    let matchCount = 0;
-
-    rows.forEach(row => {
-      if (!normalized) {
-        row.style.display = "flex";
-        matchCount++;
-        return;
-      }
-
-      const name = (row.getAttribute("data-name") || "").toLowerCase();
-      const role = (row.getAttribute("data-role") || "").toLowerCase();
-      const id = (row.getAttribute("data-id") || "").toLowerCase();
-      const num = (row.getAttribute("data-number") || "").toLowerCase();
-      const phone = (row.getAttribute("data-phone") || "").toLowerCase();
-      const text = row.textContent.toLowerCase();
-
-      // Check criteria:
-      // 1. Name or role text match
-      const nameOrRoleMatch = name.includes(normalized) || role.includes(normalized);
-      // 2. Full-text content match
-      const textMatch = text.includes(normalized);
-      // 3. Member ID match (e.g. searching "101", "102", "#101", "01")
-      const idMatch = id === cleanNumQuery || id.includes(cleanNumQuery) || (`#${id}`).includes(normalized);
-      // 4. Member number / index match (e.g. searching "1", "2", "3", "#1")
-      const numMatch = num === cleanNumQuery || (`#${num}`).includes(normalized) || (`0${num}`).includes(cleanNumQuery);
-      // 5. Phone / contact digits match
-      const phoneMatch = phone && phone.includes(cleanNumQuery);
-
-      const isMatch = nameOrRoleMatch || textMatch || idMatch || numMatch || phoneMatch;
-
-      row.style.display = isMatch ? "flex" : "none";
-      if (isMatch) matchCount++;
-    });
-
-    if (teamEmptyState) {
-      teamEmptyState.style.display = matchCount === 0 ? "flex" : "none";
-    }
-  }
-
-  if (teamSearchInput) {
-    teamSearchInput.addEventListener("input", (e) => {
-      filterTeamList(e.target.value);
-    });
-  }
-
-  if (clearTeamSearchBtn && teamSearchInput) {
-    clearTeamSearchBtn.addEventListener("click", () => {
-      teamSearchInput.value = "";
-      filterTeamList("");
-      teamSearchInput.focus();
-    });
-  }
+  // Team: Real-time Member Search Filtering based on data-name, data-role, data-id, and data-number
+  initTeamSearch();
 
   // Top window search bar click interaction
   const topSearchBar = document.querySelector(".window-search");
@@ -1285,6 +1211,82 @@ function initDashboardTabs() {
       }
 
       showMockupToast(isArabic ? "✓ تم نسخ مفتاح API إلى الحافظة" : "✓ API key copied to clipboard");
+    });
+  }
+}
+
+// -----------------------------------------------------------------------------
+// 15. Team Members Search Filtering (data-name, data-role, data-id, data-number)
+// -----------------------------------------------------------------------------
+function filterTeamList(rawQuery) {
+  const teamSearchInput = document.getElementById("team-search-input");
+  const teamEmptyState = document.getElementById("team-empty-search");
+  const rows = document.querySelectorAll(".dash-team-row");
+
+  const query = (typeof rawQuery === "string" ? rawQuery : (teamSearchInput ? teamSearchInput.value : "")).trim().toLowerCase();
+
+  // Normalize Arabic-Indic and Eastern digits (e.g. ١ -> 1, 101)
+  const arabicDigits = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
+  const farsiDigits = ["۰", "۱", "۲", "۳", "۴", "۵", "۶", "۷", "۸", "۹"];
+  let normalizedQuery = query;
+  for (let i = 0; i < 10; i++) {
+    normalizedQuery = normalizedQuery.split(arabicDigits[i]).join(String(i));
+    normalizedQuery = normalizedQuery.split(farsiDigits[i]).join(String(i));
+  }
+  const cleanQuery = normalizedQuery.replace(/^[#№]\s*/, "");
+
+  let matchCount = 0;
+
+  rows.forEach(row => {
+    if (!query) {
+      row.style.display = "flex";
+      matchCount++;
+      return;
+    }
+
+    const name = (row.getAttribute("data-name") || "").toLowerCase();
+    const role = (row.getAttribute("data-role") || "").toLowerCase();
+    const id = (row.getAttribute("data-id") || "").toLowerCase();
+    const number = (row.getAttribute("data-number") || "").toLowerCase();
+
+    // Check data-name, data-role, data-id, data-number
+    const matchName = name.includes(query) || name.includes(normalizedQuery);
+    const matchRole = role.includes(query) || role.includes(normalizedQuery);
+    const matchId = id.includes(query) || id.includes(normalizedQuery) || (cleanQuery && id.includes(cleanQuery));
+    const matchNumber = number.includes(query) || number.includes(normalizedQuery) || (cleanQuery && number.includes(cleanQuery));
+
+    const isMatch = matchName || matchRole || matchId || matchNumber;
+
+    row.style.display = isMatch ? "flex" : "none";
+    if (isMatch) matchCount++;
+  });
+
+  if (teamEmptyState) {
+    teamEmptyState.style.display = matchCount === 0 ? "flex" : "none";
+  }
+}
+
+function initTeamSearch() {
+  const teamSearchInput = document.getElementById("team-search-input");
+  if (!teamSearchInput) return;
+
+  if (teamSearchInput.dataset.searchBound === "true") return;
+  teamSearchInput.dataset.searchBound = "true";
+
+  const clearTeamSearchBtn = document.getElementById("btn-clear-team-search");
+
+  // Listen to input, keyup, change, and search events to handle all typing/testing scenarios
+  ["input", "keyup", "change", "search"].forEach(eventName => {
+    teamSearchInput.addEventListener(eventName, () => {
+      filterTeamList(teamSearchInput.value);
+    });
+  });
+
+  if (clearTeamSearchBtn) {
+    clearTeamSearchBtn.addEventListener("click", () => {
+      teamSearchInput.value = "";
+      filterTeamList("");
+      teamSearchInput.focus();
     });
   }
 }
