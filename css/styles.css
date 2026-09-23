@@ -1930,13 +1930,15 @@ html[dir="rtl"] .dash-avatar-dot {
 
 [data-theme="dark"] .dash-wf-card,
 [data-theme="dark"] .dash-team-row,
-[data-theme="dark"] .dash-setting-item {
+[data-theme="dark"] .dash-setting-item,
+[data-theme="dark"] .activity-row {
   background: #0f172a;
   border-color: rgba(255, 255, 255, 0.08);
 }
 
 [data-theme="dark"] .dash-wf-card:hover,
-[data-theme="dark"] .dash-team-row:hover {
+[data-theme="dark"] .dash-team-row:hover,
+[data-theme="dark"] .activity-row:hover {
   border-color: rgba(99, 91, 255, 0.5);
   background: #1e293b;
 }

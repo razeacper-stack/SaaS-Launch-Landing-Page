@@ -59,7 +59,7 @@ const SaaSLaunchConfig = {
 // -----------------------------------------------------------------------------
 // 2. DOM Ready Initializer
 // -----------------------------------------------------------------------------
-document.addEventListener("DOMContentLoaded", () => {
+function initApplication() {
   initThemeToggle();
   initLanguageToggle();
   initAnnouncementBar();
@@ -74,7 +74,13 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollReveal();
   initCurrentYear();
   initDashboardTabs();
-});
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initApplication);
+} else {
+  initApplication();
+}
 
 // -----------------------------------------------------------------------------
 // Theme Switching (Dark & Light Mode)
@@ -1103,43 +1109,158 @@ function initDashboardTabs() {
     });
   });
 
-  // Analytics & Activities: Simulate Live Event
-  const simulateBtn = document.getElementById("btn-simulate-activity");
+  // Analytics & Activities: Simulate Live Event (dynamically appends mock activity card)
+  const simulateBtn = document.getElementById("btn-simulate-activity") || document.querySelector('[data-action="simulate-event"]');
   const simulatedEvents = [
-    { title: "Stripe Webhook: invoice.payment_succeeded ($19.00)", desc: "Customer acct_892 renewed Pro Plan", cat: "deploys", tag: "Live", tagClass: "tag-success" },
-    { title: "Automated Redis cache invalidation across 24 edge nodes", desc: "Sync latency 12ms &middot; 0 drops", cat: "sync", tag: "Synced", tagClass: "tag-success" },
-    { title: "DDoS Mitigation rule challenged 420 requests", desc: "Edge firewall blocked abusive ASN", cat: "alerts", tag: "Mitigated", tagClass: "tag-pending" },
-    { title: "Database read replica sync health check verified", desc: "Replication lag 0ms across London & Frankfurt", cat: "alerts", tag: "Verified", tagClass: "tag-active" }
+    {
+      titleEn: "Stripe Webhook: invoice.payment_succeeded ($29.00)",
+      titleAr: "خطاف Stripe: نجاح دفع الفاتورة (29.00$)",
+      descEn: "Customer acct_892 renewed Pro Plan",
+      descAr: "تم تجديد اشتراك باقة Pro بنجاح للعميل acct_892",
+      cat: "deploys",
+      tagEn: "Live",
+      tagAr: "مباشر",
+      tagClass: "tag-success",
+      icon: "⚡",
+      iconBg: "#ede9fe",
+      iconColor: "#6d28d9"
+    },
+    {
+      titleEn: "Automated Redis cache invalidation across 24 edge nodes",
+      titleAr: "إبطال تلقائي لذاكرة التخزين المؤقت Redis عبر 24 عقدة",
+      descEn: "Sync latency 12ms · 0 packet drops",
+      descAr: "زمن استجابة المزامنة 12ms دون فقدان أي حزم بيانات",
+      cat: "sync",
+      tagEn: "Synced",
+      tagAr: "متزامن",
+      tagClass: "tag-success",
+      icon: "↻",
+      iconBg: "#e0f2fe",
+      iconColor: "#0369a1"
+    },
+    {
+      titleEn: "DDoS Mitigation rule challenged 420 requests",
+      titleAr: "جدار الحماية أوقف تلقائياً 420 طلباً مشبوهاً (DDoS)",
+      descEn: "Edge firewall blocked abusive ASN 32934",
+      descAr: "تم حظر حركة المرور المسيئة الصادرة عن ASN 32934",
+      cat: "alerts",
+      tagEn: "Mitigated",
+      tagAr: "تم التحييد",
+      tagClass: "tag-pending",
+      icon: "🛡️",
+      iconBg: "#fef3c7",
+      iconColor: "#b45309"
+    },
+    {
+      titleEn: "Database read replica sync health check verified",
+      titleAr: "التحقق من صحة مزامنة النسخة الاحتياطية لقاعدة البيانات",
+      descEn: "Replication lag 0ms across London & Frankfurt",
+      descAr: "تأخر النسخ المتطابق 0ms بين خوادم لندن وفرانكفورت",
+      cat: "alerts",
+      tagEn: "Verified",
+      tagAr: "تم التحقق",
+      tagClass: "tag-active",
+      icon: "✓",
+      iconBg: "#dcfce7",
+      iconColor: "#15803d"
+    },
+    {
+      titleEn: "Canary deployment promoted to 100% global traffic",
+      titleAr: "ترقية النشر التجريبي Canary إلى 100% من حركة الزيارات العالمية",
+      descEn: "Zero anomalies detected in p99 latency telemetry",
+      descAr: "لم يتم رصد أي شذوذ في سجلات زمن استجابة p99",
+      cat: "deploys",
+      tagEn: "Promoted",
+      tagAr: "مُرقّى",
+      tagClass: "tag-success",
+      icon: "🚀",
+      iconBg: "#dcfce7",
+      iconColor: "#166534"
+    },
+    {
+      titleEn: "OAuth2 Session Security tokens rotated seamlessly",
+      titleAr: "تم تدوير مفاتيح أمان جلسات OAuth2 بنجاح دون انقطاع",
+      descEn: "Zero session drops reported across 48,000 active tokens",
+      descAr: "0 انقطاعات في الجلسات عبر 48,000 رمز وصول نشط",
+      cat: "alerts",
+      tagEn: "Secure",
+      tagAr: "آمن",
+      tagClass: "tag-active",
+      icon: "🔒",
+      iconBg: "#ede9fe",
+      iconColor: "#6d28d9"
+    }
   ];
   let simIndex = 0;
 
   if (simulateBtn && activityStream) {
     simulateBtn.addEventListener("click", () => {
-      const ev = simulatedEvents[simIndex % simulatedEvents.length];
-      simIndex++;
       const isArabic = document.documentElement.getAttribute("lang") === "ar";
 
-      const newActRow = document.createElement("div");
-      newActRow.className = "activity-row dash-act-item";
-      newActRow.setAttribute("data-category", ev.cat);
-      newActRow.style.animation = "dashFadeIn 0.24s cubic-bezier(0.16, 1, 0.3, 1)";
-      newActRow.style.borderColor = "var(--color-primary)";
-      newActRow.innerHTML = `
+      // Detect current category filter
+      const activeFilterPill = document.querySelector(".dash-filter-pill.is-active[data-act-filter]");
+      const currentFilter = activeFilterPill ? activeFilterPill.getAttribute("data-act-filter") : "all";
+
+      // Pick an event matching the active category if filtered, or cycle through
+      let matchingEvents = simulatedEvents;
+      if (currentFilter && currentFilter !== "all") {
+        const filteredList = simulatedEvents.filter(e => e.cat === currentFilter);
+        if (filteredList.length > 0) {
+          matchingEvents = filteredList;
+        }
+      }
+
+      const ev = matchingEvents[simIndex % matchingEvents.length];
+      simIndex++;
+
+      // Create new activity card element
+      const newActCard = document.createElement("div");
+      newActCard.className = "activity-row dash-act-item";
+      newActCard.setAttribute("data-category", ev.cat);
+      newActCard.style.animation = "dashFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1)";
+      newActCard.style.border = "1px solid var(--color-primary)";
+      newActCard.style.boxShadow = "0 2px 10px rgba(99, 91, 255, 0.14)";
+
+      const title = isArabic ? ev.titleAr : ev.titleEn;
+      const desc = isArabic ? ev.descAr : ev.descEn;
+      const tag = isArabic ? ev.tagAr : ev.tagEn;
+      const timeText = isArabic ? "الآن" : "Just now";
+
+      newActCard.innerHTML = `
         <div class="activity-left">
-          <span class="activity-icon" style="background:#ede9fe; color:#6d28d9;">⚡</span>
+          <span class="activity-icon" style="background:${ev.iconBg}; color:${ev.iconColor};">${ev.icon}</span>
           <div>
-            <div class="activity-name">${ev.title}</div>
-            <div style="font-size:0.65rem; color:var(--color-text-muted);">${ev.desc}</div>
+            <div class="activity-name">${title}</div>
+            <div style="font-size:0.65rem; color:var(--color-text-muted);">${desc}</div>
           </div>
         </div>
         <div style="display:flex; align-items:center; gap:var(--space-2);">
-          <span class="activity-tag ${ev.tagClass}">${ev.tag}</span>
-          <span style="font-size:0.65rem; color:var(--color-text-muted);">${isArabic ? "الآن" : "Just now"}</span>
+          <span class="activity-tag ${ev.tagClass}">${tag}</span>
+          <span style="font-size:0.65rem; color:var(--color-text-muted);">${timeText}</span>
         </div>
       `;
 
-      activityStream.prepend(newActRow);
-      showMockupToast(isArabic ? "⚡ تم تسجيل نشاط جديد في البث المباشر" : "⚡ New event recorded in live telemetry stream");
+      // Dynamically append new mock activity card to the list
+      activityStream.appendChild(newActCard);
+
+      // Smooth scroll the newly appended card into view if needed
+      setTimeout(() => {
+        newActCard.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        // Fade the highlight border gently after 2.5s
+        setTimeout(() => {
+          newActCard.style.transition = "border-color 0.8s ease, box-shadow 0.8s ease";
+          newActCard.style.borderColor = "";
+          newActCard.style.boxShadow = "";
+        }, 2500);
+      }, 50);
+
+      // Brief button click visual feedback
+      simulateBtn.classList.add("is-running");
+      setTimeout(() => {
+        simulateBtn.classList.remove("is-running");
+      }, 200);
+
+      showMockupToast(isArabic ? `⚡ تم إضافة نشاط جديد: ${title}` : `⚡ Appended new activity: ${title}`);
     });
   }
 
